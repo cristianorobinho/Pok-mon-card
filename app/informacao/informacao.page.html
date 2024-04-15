@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-icon name="arrow-back" slot="start" size="large" (click)="  navigateBack()"></ion-icon> 
+    <ion-title>{{ cardName }}</ion-title> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [ngClass]="getBackgroundClass()"  [fullscreen]="true">
+  <p style="margin-left: 10px;">#{{ cardId !== undefined ? formatCardId(cardId) : '' }}</p>
+ <div class="imagePokemonInfo">
+  <img class="imagePokemon" src="{{ cardImage }}" alt="{{ cardImage }}" />
+ </div>
+
+  <!-- Exibe outras informações sobre o Pokémon no conteúdo -->
+  <ion-card class="cardInfo">
+    <ion-card-header>
+      Informações do Pokémon
+    </ion-card-header>
+    <ion-card-content>
+      <p>Nome: {{ cardName }}</p>
+      <p>Tipo: {{ cardTypes }}</p>
+      <p>HP: {{ cardHp }}</p>
+      <p>Ataque: {{ cardAttack }}</p>
+      <p>Defesa: {{ cardDefense }}</p>
+      <p>Ataque Especial: {{ cardSpecialAttack }}</p>
+      <p>Defesa Especial: {{ cardSpecialDefense }}</p>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

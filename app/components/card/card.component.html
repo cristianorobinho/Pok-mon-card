@@ -1,0 +1,18 @@
+<ion-card class="cardInfo" [ngClass]="getBackgroundClass()" (click)="navigateToInformacaoPage()"> 
+  <ion-card-content class="contentCard">
+    <div class="infoContainer">
+      <div class="info">
+        <ion-card-subtitle>#{{ cardId !== undefined ? formatCardId(cardId) : '' }}</ion-card-subtitle>
+        <ion-card-title>{{ cardName }}</ion-card-title>
+        <div class="chipTypes">
+          <span *ngFor="let types of cardTypes" [ngClass]="[getBackgroundClass(), 'cor-btn']">
+            <p>{{ types }}</p>
+          </span>
+        </div>
+      </div>
+      <div class="imageContainer">
+        <img class="imagePokemon" src="{{ cardImage }}" alt="{{ cardImage }}" />
+      </div>
+    </div>
+  </ion-card-content>
+</ion-card>

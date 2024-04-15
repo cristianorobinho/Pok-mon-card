@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+
+    <ion-toolbar color="dark">
+       <ion-title color="primary"> Pokémon Cards</ion-title>
+    </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+    <div class="search">
+      <ion-input color="medium" id="input" type="search" label="Digite o nome do Pokémon" label-placement="floating" fill="outline" placeholder="Pesquisar..." (ionInput)="searchPokemon($event)"></ion-input>
+    </div>
+
+    <div *ngFor="let item of items; let index = index">
+         <app-card
+          [cardId]="item.id"
+          [cardName]="item.name"
+          [cardImage]="item.image"
+          [cardAttack]="item.attack"
+          [cardDefense]="item.defense"
+          [cardHp]="item.hp"
+          [cardSpecialAttack]="item.specialAttack"
+          [cardSpecialDefense]="item.specialDefense"
+          [cardTypes]="item.types"
+          >
+         </app-card>
+    </div>
+
+    <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+</ion-content>

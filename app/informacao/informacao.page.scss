@@ -1,0 +1,80 @@
+ion-content {
+  --background: transparent;
+}
+.grass-background{
+  background-color: #8BBE8A; /* Verde */
+}
+
+.fire-background {
+  background-color: #FFA756; /* Laranja */
+}
+
+.water-background {
+  background-color: #58ABF6; /* Azul */
+}
+
+.electric-background {
+  background-color: #F2CB55; /* Amarelo */
+}
+
+.ice-background {
+  background-color: #98d8d8; /* Azul claro */
+}
+
+.psychic-background {
+  background-color: #f85888; /* Rosa */
+}
+
+.ghost-background {
+  background-color: #705898; /* Roxo */
+}
+
+.dark-background {
+  background-color: #705848; /* Marrom */
+}
+
+.fairy-background {
+  background-color: #ee99ac; /* Rosa claro */
+}
+
+.dragon-background {
+  background-color: #7038f8; /* Roxo claro */
+}
+
+.normal-background {
+  background-color: #B5B9C4;
+}
+
+.fighting-background {
+  background-color: #EB4971; /* Vermelho */
+}
+
+.poison-background {
+  background-color: #9F6E97; /* Vermelho */
+}
+
+.ground-background {
+  background-color: #F78551; /* Vermelho */
+}
+
+
+.imagePokemonInfo {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.imagePokemon {
+  width: 300px; 
+  height: auto;
+  object-fit: cover;
+}
+
+.cardInfo {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
